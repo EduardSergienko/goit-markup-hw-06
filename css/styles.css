@@ -612,7 +612,6 @@ footer {
   text-transform: uppercase;
 
   color: #ffffff;
-  margin-bottom: 20px;
 }
 .subscribe button {
   display: flex;
@@ -636,6 +635,7 @@ footer {
 
 .subscribe .mail {
   display: flex;
+  margin-top: 20px;
 }
 
 .subscribe input {
@@ -645,9 +645,19 @@ footer {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  padding: 15px 0px 15px 16px;
 }
 .subscribe-icon {
   margin-left: 10px;
+}
+.subscribe input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.6);
 }
 /* POrtfolio */
 
