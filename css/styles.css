@@ -890,7 +890,7 @@ footer {
 .name-icon {
   fill: #2f303a;
   position: absolute;
-  left: 15px;
+  left: 12px;
   bottom: 11px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -956,6 +956,7 @@ textarea::placeholder {
   margin-top: 20px;
 }
 .policy .link {
+  display: inline-block;
   font-size: 14px;
   line-height: 1.71;
 
@@ -964,7 +965,9 @@ textarea::placeholder {
   color: #2196f3;
 }
 .policy label {
-  margin-left: 8.38px;
+  display: flex;
+  align-items: center;
+
   font-size: 14px;
   line-height: 1.71;
 
@@ -990,4 +993,33 @@ textarea::placeholder {
   color: #ffffff;
   margin: 0 auto;
   margin-top: 30px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 4px;
+  margin-right: 8.38px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 1ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .check-icon {
+  background-color: var(--activity-text-color);
+  background-image: url(../images/icon_check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--activity-text-color);
 }
