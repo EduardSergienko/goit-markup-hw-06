@@ -462,7 +462,8 @@ header {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list .item:hover {
   border-color: var(--activity-text-color);
@@ -477,6 +478,7 @@ header {
 .client-icon:focus {
   fill: var(--activity-text-color);
   border-color: var(--activity-text-color);
+  outline: var(--activity-text-color);
 }
 
 /* Подвал */
@@ -647,6 +649,7 @@ footer {
   border-radius: 4px;
 
   padding: 15px 0px 15px 16px;
+  color: var(--main-background-color);
 }
 .subscribe-icon {
   margin-left: 10px;
@@ -659,6 +662,11 @@ footer {
 
   color: rgba(255, 255, 255, 0.6);
 }
+/* .subscribe input:focus {
+  border-color: var(--activity-text-color);
+  outline: var(--activity-text-color);
+} */
+
 /* POrtfolio */
 
 /* категории  */
@@ -850,6 +858,14 @@ footer {
   border-radius: 50px;
 }
 
+.close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal:hover .close-icon {
+  fill: var(--activity-text-color);
+}
+
 /* ==============MODAL-FORM=================== */
 .modal-form {
   width: 448px;
@@ -872,9 +888,22 @@ footer {
   margin-bottom: 10px;
 }
 .name-icon {
+  fill: #2f303a;
   position: absolute;
   left: 15px;
   bottom: 14px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-wrap input:focus ~ .name-icon {
+  fill: var(--activity-text-color);
+}
+.modal-wrap input:focus {
+  border-color: var(--activity-text-color);
+  outline: var(--activity-text-color);
+}
+textarea:focus {
+  border-color: var(--activity-text-color);
+  outline: var(--activity-text-color);
 }
 textarea {
   resize: none;
@@ -883,6 +912,8 @@ textarea {
   border-radius: 4px;
   padding: 12px 16px;
   height: 120px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-wrap label {
   font-size: 12px;
@@ -906,6 +937,9 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  font-size: 12px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 textarea::placeholder {
   font-size: 12px;
